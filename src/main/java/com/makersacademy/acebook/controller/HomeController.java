@@ -40,8 +40,21 @@ public class HomeController {
 
 	@PostMapping("/post")
 	public String post(@ModelAttribute Post post) {
+		postRepository.save(post);
 		return "result";
 	}
+
+	@GetMapping("/posts")
+	public String posts(Model model) {
+		model.addAttribute("allPost", postRepository.findAll());
+		return "posts";
+	}
+
+	@GetMapping("/newpost")
+	public String newpost() {
+		return "newpost";
+	}
+
 
 	//write a database request to persist post to the database
 
