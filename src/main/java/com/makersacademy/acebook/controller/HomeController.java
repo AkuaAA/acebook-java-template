@@ -43,6 +43,12 @@ public class HomeController {
 		return "result";
 	}
 
+	//write a database request to persist post to the database
+
+	//post repo is our database action class
+
+	//can we get data from our server side database into our template and see it listed
+
 	//Create a new GET endpoint which lists all the posts
 
 
